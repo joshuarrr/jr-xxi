@@ -1,0 +1,73 @@
+/* imgGrid.css */
+.img-grid-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 0 1px var(--border-gray);
+}
+
+.desktop .img-grid-wrapper {
+  border-radius: calc(var(--border-radius) * 1.25);
+}
+
+.img-grid,
+.grid-borders {
+  position: absolute;
+  width: 100%;
+  display: grid;
+  grid-auto-rows: 1fr;
+  z-index: 2;
+}
+
+.img-grid {
+  opacity: .75;
+}
+
+.img-grid:before,
+.grid-borders:before {
+  content: '';
+  width: 0;
+  padding-bottom: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+.img-grid > *:first-child,
+.grid-borders > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+/* Cells */
+.img-grid .cell {
+  transition: opacity 1s ease-in-out;
+  /* help chrome + webkit play nice with mix-blend-mode*/
+  transform: translateZ(0);
+}
+
+/* Borders */
+.grid-borders {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+  box-shadow: inset 1px 1px 0 5px rgba(255, 0, 0, .8);
+}
+
+.grid-borders .cell {
+  box-shadow: inset -1px -1px 0 0 rgba(255, 255, 255, .8);
+  opacity: 1;
+  mix-blend-mode: normal;
+  background-color: transparent;
+  z-index: 5;
+}
+
+

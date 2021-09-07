@@ -1,0 +1,43 @@
+/* 🏕 Reset ******************************************************************/
+:root {
+  box-sizing: border-box;
+}
+
+html {
+-webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Remove image link borders */
+a img,
+:link img,
+:visited img {
+  border: 0;
+}
+
+/* Selection color  */
+
+::selection {
+  background: rgba(0, 0, 0, .8);
+  color: rgb(255, 255, 255);
+}
+
+/* Mobile */
+a:link {
+  -webkit-tap-highlight-color: transparent;
+}

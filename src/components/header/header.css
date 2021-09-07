@@ -1,0 +1,39 @@
+/* 💆🏽‍ Header ******************************************************************/
+.header {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: row;
+  margin-bottom: var(--trailer)
+}
+
+.logo-link {
+  line-height: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  left: -1rem;
+  top: -.25rem;
+  position: relative;
+}
+
+.logo-link svg {
+  fill: white;
+  transition: fill .3s ease-out;
+  top: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.logo-link:hover svg {
+  fill: #46a789;
+}
+
+.title {
+  color: white;
+  text-align: center;
+}
+
+.desktop .logo-link {
+  top: var(--trailer);
+  left: -.1rem;
+}

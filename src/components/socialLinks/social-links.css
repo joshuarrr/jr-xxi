@@ -1,0 +1,56 @@
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: var(--trailer);
+}
+
+
+/*! Icons --------------------------------------------------------------------*/
+.icon {
+  background: rgba(0, 0, 0, 0) url("../../img/ico/social-icons.svg") no-repeat;
+  background-size: 37px 293px;
+  display: inline-block;
+  position: relative;
+  /* @include size(37px); */
+  width: 3.7rem;
+  height: 3.7rem;
+  filter: saturate(05%);
+  opacity: .5;
+  transition:
+    filter .5s,
+    opacity .5s,
+    transform .5s cubic-bezier(.16, .035, .24, 1.295);
+  transform: scale(.6, .6);
+}
+
+.icon:hover,
+.icon:focus {
+  cursor: pointer;
+  filter: saturate(100%);
+  opacity: 1;
+  transform: scale(.9, .9);
+}
+
+.icon.linkedin {
+  background-position: 0 0;
+}
+
+.icon.instagram {
+  background-position: 0 -64px;
+  top: .3rem;
+}
+
+.icon.codepen {
+  background-position: 0 -125px;
+  filter: contrast(0%);
+
+  &:hover {
+    filter: contrast(100%);
+  }
+}
+
+.icon.github {
+  background-position: 0 -190px;
+}

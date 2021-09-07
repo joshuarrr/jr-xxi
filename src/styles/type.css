@@ -1,0 +1,72 @@
+/* ✍️ Typography **************************************************************/
+@font-face {
+    font-family: 'FiraCode Light';
+    font-style: normal;
+    font-weight: 400;
+    src: local('FiraCode Light'), local('FiraCodeLight'),
+    url('https://cdn.jsdelivr.net/npm/firacode@1.205.0/distr/woff2/FiraCode-Light.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('https://cdn.jsdelivr.net/npm/firacode@1.205.0/distr/woff/FiraCode-Light.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html {
+  font-size: 62.5%;
+  /* font-family: 'Fira Mono', monospace; */
+  font-family: 'FiraCode Light', monospace;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-weight: 400;
+}
+
+body {
+  color: var(--body-text-color);
+  font-size: 1.3rem;
+  line-height: 1.75;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 1.3rem;
+  color: #46a789;
+  padding-bottom: .5rem;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--green);
+  transition: color .3s ease-out;
+}
+
+a:hover {
+  cursor: pointer;
+  color: var(--yellow);
+}
+
+a:focus {
+  outline: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop,
+.desktop h1 {
+  font-size: 1.5rem;
+  letter-spacing: .05rem;
+  line-height: 2;
+}
+
+.desktop h1 {
+  padding-bottom: 2.1rem;
+}

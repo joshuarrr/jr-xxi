@@ -1,0 +1,41 @@
+.loading-indicator {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -150%);
+  line-height: 0;
+  display: flex;
+}
+
+.node-1,
+.node-2,
+.node-3 {
+  background: #333;
+  width: 1rem;
+  height: 1rem;
+  animation: pulse 4s infinite both;
+  position: relative;
+}
+
+.node-1 {
+  left: -.5rem;
+}
+
+.node-2 {
+  animation-delay: .5s;
+}
+
+.node-3 {
+  left: .5rem;
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: .2;
+    transform: scale(.9);
+  } 10% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

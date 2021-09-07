@@ -1,0 +1,6 @@
+{
+  "name": "ImgLoad",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./imgLoad.js"
+}

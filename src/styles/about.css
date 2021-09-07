@@ -1,0 +1,21 @@
+.about.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.profile-pic-wrapper {
+  width: 20rem;
+}
+
+.working-pic-wrapper {
+  width: 20rem;
+  height: 20rem;
+  margin: 0 auto;
+  padding-top: calc(var(--trailer) / 2);
+}
+
+.bio {
+  margin: var(--trailer) 0 calc(var(--trailer) * 2);
+}

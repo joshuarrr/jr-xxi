@@ -1,0 +1,6 @@
+{
+  "name": "ImgGrid",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./imgGrid.js"
+}

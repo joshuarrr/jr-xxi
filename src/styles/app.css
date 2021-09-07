@@ -1,0 +1,34 @@
+/* 👩‍💻 App *********************************************************************/
+@import './reset.css';
+@import './utility.css';
+@import './type.css';
+@import './layout.css';
+
+
+/* Vars */
+:root {
+  /* colors */
+
+  --red: #ce3a67;
+  --orange: #f0b046;
+  --yellow: rgb(200, 200, 60);
+  --green: #46a789;
+  --blue: #33bce1;
+  --purple: #AA71C4;
+
+  --border-green: #285547;
+  --border-gray: #333333;
+  --secondary-color: white;
+  --bg-color: rgb(25, 25, 25);
+  --gray: rgb(100, 100, 100);
+
+  /* fonts */
+  --body-text-color: rgb(220, 220, 220);
+
+  /* layout */
+  --trailer: 5vh;
+  --border-radius: 1.5rem;
+  --desktop-sidebar-width: 25vw;
+  --desktop-header-height: 10rem;
+  --desktop-gutter: 2.5vw;
+}

@@ -1,0 +1,26 @@
+/* 🗺 Nav *********************************************************************/
+.nav {
+  color: white;
+  margin-bottom: var(--trailer);
+  text-align: center;
+}
+
+.nav-item {
+  padding: 1rem;
+  z-index: 100;
+  position: relative;
+}
+
+
+.nav-item.current {
+  color: white;
+}
+
+.desktop .nav-item {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+

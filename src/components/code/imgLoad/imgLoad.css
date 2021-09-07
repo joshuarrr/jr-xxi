@@ -1,0 +1,104 @@
+/* imgLoad.css */
+/* Wrapper */
+.image-loader {
+  line-height: 0;
+  position: relative;
+  width: 100%;
+  padding: 0;
+  font-size: 0;
+}
+
+/* Image */
+.image-loader .image {
+  /* visibility: hidden; */
+  position: absolute;
+}
+
+/* Utility classes */
+.image-loader.rounded {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.image-loader.rounded img {
+  border-radius: var(--border-radius);
+}
+
+.desktop .image-loader.rounded {
+  border-radius: calc(var(--border-radius) * 1.25);
+  overflow: hidden;
+}
+
+.image-loader.bordered {
+  box-shadow: 0 0 0 1px var(--border-gray);
+}
+
+.image-loader.circle {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.three-up {
+  display: flex;
+  flex-direction: column;
+}
+
+.two-up .image-loader,
+.three-up .image-loader {
+  margin-bottom: calc(var(--trailer) / 2);
+}
+
+.desktop .three-up {
+  display: flex;
+  flex-direction: row;
+}
+
+.desktop .three-up .three-up-wrapper {
+  width: 30%;
+}
+
+.desktop .three-up .three-up-wrapper:not(:last-of-type) {
+  margin-right: calc(var(--desktop-gutter) / 2);
+}
+
+.desktop .two-up {
+  display: flex;
+  flex-direction: row;
+}
+
+.desktop .two-up .two-up-wrapper {
+  width: 45%;
+}
+
+.desktop .two-up .two-up-wrapper:not(:last-of-type) {
+  margin-right: calc(var(--desktop-gutter) / 2);
+}
+
+/* scrollable */
+.image-loader.scrollable {
+  overflow-y: scroll;
+}
+
+.desktop .image-loader.scrollable {
+  overflow-y: scroll;
+}
+
+.desktop .image.scrollable {
+  overflow: hidden;
+  /* border-radius: 0; */
+}
+
+/* Loading message */
+.loading-message {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Controls */
+.image-loader-controls {
+  display: flex;
+  justify-content: flex-end;
+  margin: calc(var(--trailer) / 2) ;
+}

@@ -3,5 +3,5 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "jr-xxi",
   },
-  plugins: ["gatsby-plugin-sitemap"],
+  plugins: ["gatsby-plugin-sitemap", "gatsby-plugin-layout"],
 };

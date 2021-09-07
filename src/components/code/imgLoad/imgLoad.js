@@ -20,14 +20,14 @@ import React from 'react'
 import { Image, Transformation } from 'cloudinary-react'
 
 // utils
-import { parseAspectRatio } from '../../../../utils'
+import { parseAspectRatio } from '../../../utils'
 
 // styles
 import './imgLoad.css'
 
 // components
-import LoadingIndicator from '../../../loadingIndicator/'
-//
+import LoadingIndicator from '../../loadingIndicator'
+  
 
 
 class ImgLoad extends React.Component {

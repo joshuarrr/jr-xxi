@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "cloudinary-react": "^1.7.0",
     "gatsby": "^3.13.0",
     "gatsby-plugin-layout": "^1.10.0",
     "gatsby-plugin-sitemap": "^4.9.0",

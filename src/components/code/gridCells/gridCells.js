@@ -1,7 +1,7 @@
 import React from 'react'
 
 // utils
-import { randomIndexOf } from '../../../../utils'
+import { randomIndexOf } from '/src/utils'
 
 // styles
 import './gridCells.css'

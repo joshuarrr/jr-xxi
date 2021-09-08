@@ -1,53 +1,29 @@
 import * as React from "react"
-import { Link } from "gatsby"
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
 
 // markup
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
+    <>
       <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+      <section key="content" className="content">
+        <p>Lost</p>
+          <br />Stand still. The trees ahead and bushes beside you
+          <br />Are not lost. Wherever you are is called Here,
+          <br />And you must treat it as a powerful stranger,
+          <br />Must ask permission to know it and be known.
+          <br />The forest breathes. Listen. It answers,
+          <br />I have made this place around you.
+          <br />If you leave it, you may come back again, saying Here.
+          <br />No two trees are the same to Raven.
+          <br />No two branches are the same to Wren.
+          <br />If what a tree or a bush does is lost on you,
+          <br />You are surely lost. Stand still. The forest knows
+          <br />Where you are. You must let it find you.
+          <br />
+          <br />— David Wagoner
+      </section>
+    </>
   )
 }
 

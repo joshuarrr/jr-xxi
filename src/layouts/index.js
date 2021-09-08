@@ -1,5 +1,4 @@
 import React from 'react'
-import MediaQuery from 'react-responsive'
 import { useMediaQuery } from 'react-responsive'
 
 // components
@@ -14,9 +13,8 @@ import '../styles/app.css'
 
 export default function Layout({ children }) {
   const isBigScreen = useMediaQuery({
-    query: '(min-width: 1224px)'
+    query: '(min-width: 1024px)'
   })
-
 
   return (
     <>
@@ -29,9 +27,7 @@ export default function Layout({ children }) {
           <Footer />
         </div>
         <main className="main">
-        <React.Suspense fallback={<LoadingIndicator />}>
           {children}
-        </React.Suspense>
         </main>
       </div>
     }
@@ -40,10 +36,8 @@ export default function Layout({ children }) {
       <div className="mobile">
         <Header />
           <main className="main">
-            <React.Suspense fallback={<LoadingIndicator />}>
-              {children}
-            </React.Suspense>
-          </main>
+                  {children}
+              </main>
           <Footer />
         </div>
     }

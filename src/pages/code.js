@@ -1,4 +1,6 @@
 import * as React from "react"
+import { Helmet } from "react-helmet"
+
 
 // components
 import ScrollButton from '/src/components/scrollToTop/'
@@ -68,6 +70,10 @@ const images = [
 
   render = () => {
     return [
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>joshuar — code</title>,
+      </Helmet>,
       <section key="content-code-projects" className="code projects">
         <CodeProject
           title="React Grid Thing"

@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 
 // components
 import ImgLoad from "/src/components/code/imgLoad"
@@ -10,6 +11,10 @@ import "/src/styles/project.css"
 
 export default function Lumen() {
   return [
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Aila</title>,
+    </Helmet>,    
     <section key="lumen-project" className="project lumen">
          <section className="summary">
         <h1>/* Lumen */</h1>

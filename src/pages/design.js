@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Helmet } from "react-helmet"
 import { Link } from "gatsby"
 
 // components
@@ -10,7 +11,10 @@ import "/src/styles/projects.css"
 
 export default function Design() {
   return (
-    <title>joshuar — product design</title>,
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>joshuar — product design</title>,
+    </Helmet>,
     <section key="design-projects" className="design projects">
       <section className="project-summary">
         <h1>/* Hilights */</h1>

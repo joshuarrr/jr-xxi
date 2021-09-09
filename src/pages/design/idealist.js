@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 
 // components
 import ImgLoad from "/src/components/code/imgLoad"
@@ -10,6 +11,10 @@ import "/src/styles/project.css"
 
 export default function Idealist() {
   return [
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Aila</title>,
+    </Helmet>,    
     <section key="idealist-project" className="project idealist">
       <section className="summary">
         <h1>/* Idealist */</h1>

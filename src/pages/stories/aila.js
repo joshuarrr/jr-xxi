@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Helmet } from "react-helmet"
 
 // styles
 import "/src/styles/stories.css"
@@ -6,6 +7,10 @@ import "/src/styles/stories.css"
 
 export default function Ailla() {
   return (
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Aila</title>,
+    </Helmet>,
     <section key="content" className="story content">
       <h1>Aila, The Winged Unicorn</h1>
 

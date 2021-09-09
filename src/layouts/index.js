@@ -34,25 +34,23 @@ export default function Layout({ children }) {
 
   //works
   return isClient ? (
-    isBigScreen 
-    ? <div className="desktop grid">
+    isBigScreen ? (
+      <div className="desktop grid">
         <div className="left-column">
           <Header />
           <Nav />
           <Footer />
         </div>
-        <main className="main">
-          {children}
-        </main>
+        <main className="main">{children}</main>
       </div>
-    : <p>Little</p>
+    ) : (
+      <div className="mobile">
+        <Header />
+        <main className="main">{children}</main>
+        <Footer />
+      </div>
+    )
   ) : (
-    <div className="mobile">
-      <Header />
-      <main className="main">
-        {children}
-        </main>
-      <Footer />
-    </div>
+    <p>Loading....</p>
   )
 }

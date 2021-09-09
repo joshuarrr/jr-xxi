@@ -10,11 +10,12 @@ import ScrollButton from "/src/components/scrollToTop/"
 import "/src/styles/projects.css"
 
 export default function Design() {
-  return (
+  return [
     <Helmet>
       <meta charSet="utf-8" />
-      <title>joshuar — product design</title>,
+      <title>joshuar — product design</title>
     </Helmet>,
+
     <section key="design-projects" className="design projects">
       <section className="project-summary">
         <h1>/* Hilights */</h1>
@@ -75,5 +76,5 @@ export default function Design() {
         delayInMs="16.66"
       />   
     </section>
-  )
+  ]
 }

@@ -11,7 +11,7 @@ import "../styles/about.css"
 const IndexPage = () => [
   <Helmet>
     <meta charSet="utf-8" />
-    <title>joshuar</title>,
+    <title>joshuar</title>
   </Helmet>,
   <section key="content" className="about content">
     <div className="profile-pic-wrapper">

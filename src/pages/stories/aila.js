@@ -6,10 +6,10 @@ import "/src/styles/stories.css"
 
 
 export default function Ailla() {
-  return (
+  return [
     <Helmet>
       <meta charSet="utf-8" />
-      <title>Aila</title>,
+      <title>Aila</title>
     </Helmet>,
     <section key="content" className="story content">
       <h1>Aila, The Winged Unicorn</h1>
@@ -1820,5 +1820,5 @@ export default function Ailla() {
 
       <p></p>
     </section>
-  )
+  ]
 }

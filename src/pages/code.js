@@ -72,7 +72,7 @@ const images = [
     return [
       <Helmet>
         <meta charSet="utf-8" />
-        <title>joshuar — code</title>,
+        <title>joshuar — code</title>
       </Helmet>,
       <section key="content-code-projects" className="code projects">
         <CodeProject

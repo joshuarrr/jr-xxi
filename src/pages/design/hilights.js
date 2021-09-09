@@ -13,7 +13,7 @@ export default function Hilights() {
   return [
     <Helmet>
       <meta charSet="utf-8" />
-      <title>Aila</title>,
+      <title>joshuar — product design</title>
     </Helmet>,
     <section key="hilights-project" className="project hilights">
       <section className="summary">

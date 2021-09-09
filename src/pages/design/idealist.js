@@ -13,7 +13,7 @@ export default function Idealist() {
   return [
     <Helmet>
       <meta charSet="utf-8" />
-      <title>Aila</title>,
+      <title>joshuar — product design</title>
     </Helmet>,    
     <section key="idealist-project" className="project idealist">
       <section className="summary">

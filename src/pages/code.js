@@ -50,7 +50,8 @@ const images = [
     }
   }
 
-  handleReload = (img) => {
+  handleReload = (event, img) => {
+    event.preventDefault()
     this.setState( prevState => ({
       [img]: null
     }));
@@ -77,18 +78,20 @@ const images = [
       <section key="content-code-projects" className="code projects">
         <CodeProject
           title="React Grid Thing"
-          description="Pretty squares... This experiment grabs a color pallet from an image to overlay a shifting sea of squares. Reload to see a different photo."
+          description="Pretty squares&#x2026; This experiment grabs a color pallet from an image to overlay a shifting sea of squares. Reload to see a different photo."
           codeUrl="https://raw.githubusercontent.com/joshuarrr/jr-xx/master/src/components/projects/code/imgGrid/imgGrid.js"
           ratio='16x9'
         >
-          <ImgGrid
-            url={this.state.image1}
-            ratio='16x9'
-            duration='0.5s'
-            className="rounded bordered"
-            cloudinary
-          />
-          <button className="code-refresh" onClick={() => this.handleReload('image1')}> &#10227; </button>
+          <a href="#" onClick={(event) => this.handleReload(event, 'image1')}>
+            <ImgGrid
+              url={this.state.image1}
+              ratio='16x9'
+              duration='0.5s'
+              className="rounded bordered"
+              cloudinary
+            />
+          </a>
+          <button className="code-refresh" onClick={(event) => this.handleReload(event, 'image1')}> &#10227; </button>
         </CodeProject>
 
         <CodeProject
@@ -97,15 +100,17 @@ const images = [
           codeUrl="https://raw.githubusercontent.com/joshuarrr/jr-xx/master/src/components/projects/code/imgLoad/imgLoad.js"
           ratio='9x6'
         >
-          <ImgLoad
-            url={this.state.image2}
-            ratio='9x6'
-            duration='0.5s'
-            className="rounded bordered"
-            cloudinary
-            indicator
-          />
-          <button className="code-refresh" onClick={() => this.handleReload('image2')}> &#10227; </button>
+          <a href="#" onClick={(event) => this.handleReload(event, 'image2')}>
+            <ImgLoad
+              url={this.state.image2}
+              ratio='9x6'
+              duration='0.5s'
+              className="rounded bordered"
+              cloudinary
+              indicator
+            />
+          </a>
+          <button className="code-refresh" onClick={(event) => this.handleReload(event, 'image2')}> &#10227; </button>
         </CodeProject>
       </section>,
       <ScrollButton

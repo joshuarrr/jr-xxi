@@ -11,7 +11,7 @@ import "/src/styles/projects.css"
 
 export default function Design() {
   return [
-    <Helmet>
+    <Helmet key="helmet">
       <meta charSet="utf-8" />
       <title>joshuar — product design</title>
     </Helmet>,

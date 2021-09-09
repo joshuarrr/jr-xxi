@@ -7,7 +7,7 @@ import "/src/styles/stories.css"
 
 export default function Ailla() {
   return [
-    <Helmet>
+    <Helmet key="helmet">
       <meta charSet="utf-8" />
       <title>Aila</title>
     </Helmet>,

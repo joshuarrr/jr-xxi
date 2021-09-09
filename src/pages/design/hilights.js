@@ -1,6 +1,6 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
+import { Link } from "gatsby"
 
 // components
 import ImgLoad from "/src/components/code/imgLoad"
@@ -11,7 +11,7 @@ import "/src/styles/project.css"
 
 export default function Hilights() {
   return [
-    <Helmet>
+    <Helmet key="helmet">
       <meta charSet="utf-8" />
       <title>joshuar — product design</title>
     </Helmet>,

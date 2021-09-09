@@ -2,14 +2,14 @@ import * as React from "react"
 import { Helmet } from "react-helmet"
 
 // components
-import ScrollButton from "../components/scrollToTop"
 import ImgLoad from "../components/code/imgLoad"
+import ScrollButton from "../components/scrollToTop"
 
 // styles
 import "../styles/about.css"
 
 const IndexPage = () => [
-  <Helmet>
+  <Helmet  key="helmet">
     <meta charSet="utf-8" />
     <title>joshuar</title>
   </Helmet>,

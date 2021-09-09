@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 
 const NotFoundPage = () => {
   return [
-    <Helmet>
+    <Helmet key="helmet">
       <meta charSet="utf-8" />
       <title>joshuar — 404</title>
     </Helmet>,    

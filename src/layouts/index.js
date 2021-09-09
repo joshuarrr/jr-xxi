@@ -22,8 +22,6 @@ export default function Layout({ children }) {
     setClient(true)
   }, [])
 
-  // console.log(isClient)
-
   const BigLayout = () => {
     <p>Big Layout</p>
   }
@@ -51,6 +49,6 @@ export default function Layout({ children }) {
       </div>
     )
   ) : (
-    <p>Loading....</p>
+    <LoadingIndicator />
   )
 }

@@ -3,10 +3,10 @@ import { Helmet } from "react-helmet"
 
 
 // components
-import ScrollButton from '/src/components/scrollToTop/'
 import CodeProject from '/src/components/codeProject/'
 import ImgGrid from '/src/components/code/imgGrid/'
 import ImgLoad from '/src/components/code/imgLoad/'
+import ScrollButton from '/src/components/scrollToTop/'
 
 // utils
 import { chooseFrom } from '/src/utils'
@@ -70,7 +70,7 @@ const images = [
 
   render = () => {
     return [
-      <Helmet>
+      <Helmet key="helmet">
         <meta charSet="utf-8" />
         <title>joshuar — code</title>
       </Helmet>,

@@ -1,4 +1,5 @@
 import React from "react"
+import { useState, useEffect } from "react"
 import { useMediaQuery } from "react-responsive"
 
 // components
@@ -11,27 +12,46 @@ import LoadingIndicator from "../components/loadingIndicator/"
 import "../styles/app.css"
 
 export default function Layout({ children }) {
+  const [isClient, setClient] = useState(false)
+
   const isBigScreen = useMediaQuery({
     query: "(min-width: 1024px)",
   })
 
-  // TODO: https://github.com/gatsbyjs/gatsby/issues/14601
-  // ClasName fuckery
-  return isBigScreen ? (
-    <div>
-      <div className="desktop grid">
+  useEffect(() => {
+    setClient(true)
+  }, [])
+
+  // console.log(isClient)
+
+  const BigLayout = () => {
+    <p>Big Layout</p>
+  }
+
+  const LilLayout = () => {
+    <p>Lil' Layout</p>
+  }
+
+  //works
+  return isClient ? (
+    isBigScreen 
+    ? <div className="desktop grid">
         <div className="left-column">
           <Header />
           <Nav />
           <Footer />
         </div>
-        <main className="main">{children}</main>
+        <main className="main">
+          {children}
+        </main>
       </div>
-    </div>
+    : <p>Little</p>
   ) : (
     <div className="mobile">
       <Header />
-      <main className="main">{children}</main>
+      <main className="main">
+        {children}
+        </main>
       <Footer />
     </div>
   )

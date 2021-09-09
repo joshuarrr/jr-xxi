@@ -23,18 +23,14 @@ const images = [
  ]
 
  const images2 = [
-  'jr-xix/projects/conquer',
-  'jr-xix/projects/santa-monica',
-  'jr-xix/projects/birds',
-  'adia',
-  'mask',
-  'paint',
-  'drop',
   'deepestBlue',
   'Flyboys-01',
   'pink-floyd-cal-front',
-  'pink-floyd-cal-back',
+  'cold-girl',
+  'prc',
   'CCA2',
+  'CCA-01',
+  'Chali2Na',
   'polar-express-01',
  ] 
 

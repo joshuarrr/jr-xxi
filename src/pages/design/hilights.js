@@ -88,6 +88,7 @@ export default function Hilights() {
             ratio="2101x1700"
             className="rounded"
           />
+          <br />
           <ImgLoad
             url="jr-xix/hilights/hilights-imac"
             cloudinary

@@ -12,6 +12,7 @@
 .image-loader .image {
   /* visibility: hidden; */
   position: absolute;
+  width: 100%;
 }
 
 /* Utility classes */

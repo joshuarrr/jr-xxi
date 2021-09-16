@@ -53,6 +53,7 @@ export default function Idealist() {
             cloudinary
             ratio="2560x1600"
             className="rounded scrollable"
+            gravity="north"
           />
         </section>
       </section>

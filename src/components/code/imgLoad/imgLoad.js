@@ -14,6 +14,8 @@
     loadingMessage: display a message while loading
     indicator: display a component while loading
     cloudinary: use cloudinary component instead of img
+    gravity: compass direction, one of: north_east, north, north_west, west, 
+      south_west, south, south_east, east, or center (defautl)
   */
 
 import React from 'react'
@@ -41,11 +43,11 @@ class ImgLoad extends React.Component {
     loadingMessage: null,
     controls: false,
     cloudinary: true,
+    gravity: 'center',
   }
 
   constructor(props) {
     super(props)
-
     this.state = {
       loaded: false,
       reload: 0
@@ -114,6 +116,7 @@ class ImgLoad extends React.Component {
           f_auto="true"
           secure
           responsive
+          gravity={this.props.gravity}
           onLoad={event => {
             // let parent know the image loaded and send back the url
             if (this.props.imgLoaded) {
@@ -123,7 +126,7 @@ class ImgLoad extends React.Component {
           }}
           style={imgStyles}
         >
-          <Transformation aspectRatio={parseAspectRatio(this.props.ratio, 'c')} crop="fill"  />
+          <Transformation aspectRatio={parseAspectRatio(this.props.ratio, 'c')} crop="fill" gravity={this.props.gravity} />
         </Image>
         
       : <img

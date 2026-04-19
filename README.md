@@ -1,54 +1,72 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# jr-xxi
 
-## 🚀 Quick start
+Personal site for [Joshua Richey](https://www.joshuar.com), built with [Gatsby](https://www.gatsbyjs.com/) 3 and React 17.
 
-1.  **Create a Gatsby site.**
+**Live:** [https://www.joshuar.com](https://www.joshuar.com)
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+**Source:** [github.com/joshuarrr/jr-xxi](https://github.com/joshuarrr/jr-xxi)
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+## Deploy (Netlify)
 
-2.  **Start developing.**
+This site is hosted on **Netlify** and **deploys automatically** when you push to the Git branch Netlify uses for production (usually `main`). You do not run a separate deploy step from this repo.
 
-    Navigate into your new site’s directory and start it up.
+Build settings live in the **Netlify UI** (not in a `netlify.toml` here). They should match what Gatsby expects:
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+- **Build command:** `yarn build` or `npm run build` (runs `gatsby build`)
+- **Publish directory:** `public`
 
-3.  **Open the code and start customizing!**
+The Netlify project may also use **[@netlify/plugin-gatsby](https://docs.netlify.com/integrations/frameworks/gatsby/)** from the Plugins list. Netlify may suggest adding **`gatsby-plugin-netlify`** in `gatsby-config.js` if you rely on Gatsby-style redirects.
 
-    Your site is now running at http://localhost:8000!
+## Local development
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+Install dependencies, then start the dev server:
 
-4.  **Learn more**
+```bash
+npm install
+npm run develop
+```
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+The site runs at [http://localhost:8000](http://localhost:8000). GraphiQL: [http://localhost:8000/___graphql](http://localhost:8000/___graphql).
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+To preview a **production build** locally:
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```bash
+npm run build
+npm run serve
+```
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+### Node.js and OpenSSL
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+**Netlify’s build image** uses the Node version set in **Site settings → Build & deploy → Environment** (or an `.nvmrc` if you add one). Default scripts are written so **`gatsby build` works there** without extra `NODE_OPTIONS`.
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+If you use a **newer Node** locally (for example current releases with OpenSSL 3) and Webpack fails with `ERR_OSSL_EVP_UNSUPPORTED`, use the OpenSSL legacy provider **only on your machine**:
 
-## 🚀 Quick start (Gatsby Cloud)
+```bash
+npm run develop:openssl
+# or
+npm run build:openssl
+```
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+Do **not** put `--openssl-legacy-provider` in the default `build` script: older Node versions used on CI can reject that flag when it is set via `NODE_OPTIONS`.
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+## Scripts
+
+| Script | Purpose |
+|--------|---------|
+| `develop` / `start` | Gatsby dev server |
+| `build` | Production build → `public/` |
+| `serve` | Serve `public/` after `build` |
+| `clean` | Clear Gatsby cache and `public/` |
+| `develop:openssl` / `start:openssl` / `build:openssl` | Same as above, for local Node + OpenSSL 3 issues |
+
+## Project layout
+
+- **`src/pages/`** — File-based routes (e.g. `index.js` → `/`)
+- **`src/components/`** — Shared UI
+- **`src/styles/`** — CSS
+- **`gatsby-config.js`** — Gatsby config; `siteMetadata.siteUrl` is used for the sitemap and SEO
+
+## Further reading
+
+- [Gatsby documentation](https://www.gatsbyjs.com/docs/)
+- [Netlify + Gatsby](https://docs.netlify.com/integrations/frameworks/gatsby/)

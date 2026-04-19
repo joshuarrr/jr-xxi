@@ -14,6 +14,12 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
+  "overrides": {
+    "react-palette": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
+  },
   "dependencies": {
     "cloudinary-react": "^1.7.0",
     "gatsby": "^3.13.0",
